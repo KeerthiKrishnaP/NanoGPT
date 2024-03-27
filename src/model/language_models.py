@@ -11,6 +11,7 @@ class BigramLanguageMode(nn.Module):
     def __init__(self, vocabulary_size) -> None:
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocabulary_size, vocabulary_size)
+        self.
 
     def forward(self, index, targets=None):
         logits = self.token_embedding_table(index)  # (BTC)
